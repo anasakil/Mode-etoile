@@ -25,7 +25,10 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/api/models', modelRoutes);
 app.use('/api/images', imagesRouter);
-app.use('/api/auth', authRoutes); 
+app.use('/api/auth', authRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
 
 
 const PORT = process.env.PORT || 5000;
